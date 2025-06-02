@@ -12,6 +12,16 @@ scale = Vector2(0.130435, 0.143823)
 texture = ExtResource("1_pyaef")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_2qa5t")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 32.0
+offset_bottom = 16.0
+scale = Vector2(2, 2)
+text = "0"

@@ -4,7 +4,7 @@ signal left_mouse_button_clicked
 signal left_mouse_button_released
 
 const COLISSION_MASK_CARD = 1
-const COLISSION_MASK_CARD_DECK = 2
+const COLISSION_MASK_CARD_DECK = 4
 
 var card_manager_reference;
 var deck_reference;
