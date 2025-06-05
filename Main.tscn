@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://cnx3348ldb4jk"]
 
-[ext_resource type="Script" uid="uid://cnmptee76ik67" path="res://CardManager.gd" id="1_uu6xs"]
-[ext_resource type="Script" uid="uid://dg0q2pktf6r3l" path="res://PlayerHand.gd" id="3_cm0pq"]
+[ext_resource type="Script" uid="uid://cnmptee76ik67" path="res://Scripts/CardManager.gd" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://dg0q2pktf6r3l" path="res://Scripts/PlayerHand.gd" id="3_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://bosljrq8vvf0o" path="res://CardSlot.tscn" id="3_r0du0"]
 [ext_resource type="PackedScene" uid="uid://ch68lnjrc1254" path="res://Deck.tscn" id="4_fos0i"]
-[ext_resource type="Script" uid="uid://ba4wmkqoq8oj4" path="res://Deck.gd" id="5_3dxm6"]
-[ext_resource type="Script" uid="uid://b1majaadkyux3" path="res://InputManager.gd" id="6_3dxm6"]
+[ext_resource type="Script" uid="uid://ba4wmkqoq8oj4" path="res://Scripts/Deck.gd" id="5_3dxm6"]
+[ext_resource type="Script" uid="uid://b1majaadkyux3" path="res://Scripts/InputManager.gd" id="6_3dxm6"]
 
 [node name="Main" type="Node2D"]
 

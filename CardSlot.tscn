@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bosljrq8vvf0o"]
 
-[ext_resource type="Script" uid="uid://oqturtxa1ync" path="res://CardSlot.gd" id="1_mt86f"]
+[ext_resource type="Script" uid="uid://oqturtxa1ync" path="res://Scripts/CardSlot.gd" id="1_mt86f"]
 [ext_resource type="Texture2D" uid="uid://bw0mjwj4lbxqk" path="res://images/mortero.png" id="2_iqweo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wk5el"]

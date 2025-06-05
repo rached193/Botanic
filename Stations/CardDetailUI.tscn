@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8p3jd4kptejm"]
+
+[ext_resource type="Script" uid="uid://bmppdm5gfle43" path="res://Scripts/CardDetailUi.gd" id="1_uyjyo"]
+
+[node name="CardDetailUi" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_uyjyo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NameLabel" type="Label" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DescriptionText" type="RichTextLabel" parent="Panel/VBoxContainer"]
+layout_mode = 2
