@@ -19,4 +19,5 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [node name="DescriptionText" type="RichTextLabel" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2

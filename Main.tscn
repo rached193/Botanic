@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnx3348ldb4jk"]
+[gd_scene load_steps=8 format=3 uid="uid://cnx3348ldb4jk"]
 
 [ext_resource type="Script" uid="uid://cnmptee76ik67" path="res://Scripts/CardManager.gd" id="1_uu6xs"]
 [ext_resource type="Script" uid="uid://dg0q2pktf6r3l" path="res://Scripts/PlayerHand.gd" id="3_cm0pq"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ch68lnjrc1254" path="res://Deck.tscn" id="4_fos0i"]
 [ext_resource type="Script" uid="uid://ba4wmkqoq8oj4" path="res://Scripts/Deck.gd" id="5_3dxm6"]
 [ext_resource type="Script" uid="uid://b1majaadkyux3" path="res://Scripts/InputManager.gd" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://b8p3jd4kptejm" path="res://UI/CardDetailUI.tscn" id="7_lgr22"]
 
 [node name="Main" type="Node2D"]
 
@@ -13,7 +14,7 @@
 script = ExtResource("1_uu6xs")
 
 [node name="CardSlot" parent="." instance=ExtResource("3_r0du0")]
-position = Vector2(872, 296)
+position = Vector2(840, 312)
 
 [node name="PlayerHand" type="Node2D" parent="."]
 script = ExtResource("3_cm0pq")
@@ -25,3 +26,7 @@ script = ExtResource("5_3dxm6")
 
 [node name="InputManager" type="Node2D" parent="."]
 script = ExtResource("6_3dxm6")
+
+[node name="CardDetailUi" parent="." instance=ExtResource("7_lgr22")]
+offset = Vector2(1850, 0)
+transform = Transform2D(1, 0, 0, 1, 1850, 0)

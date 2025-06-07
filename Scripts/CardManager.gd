@@ -4,17 +4,19 @@ const COLISSION_MASK_CARD = 1
 const COLISSION_MASK_CARD_SLOT = 2
 const DEFAULT_CARD_MOVE_SPEED = 0.1;
 
-var screen_size: Vector2
-var card_being_dragged: Card
-var is_hovering_on_card: bool
-var player_hand_reference: PlayerHand
+var screen_size: Vector2;
+var card_being_dragged: Card;
+var is_hovering_on_card: bool;
+var player_hand_reference: PlayerHand;
+var card_detail_ui;
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	player_hand_reference = $"../PlayerHand";
+	card_detail_ui = $"../CardDetailUi/Panel"
 	$"../InputManager".connect("left_mouse_button_released", on_left_click_released)
 
-func _process(_delta:float) -> void:
+func _process(_delta: float) -> void:
 	if card_being_dragged:
 		var mouse_pos = get_global_mouse_position()
 		card_being_dragged.position = Vector2(
@@ -22,8 +24,9 @@ func _process(_delta:float) -> void:
 			clamp(mouse_pos.y,0,screen_size.y)
 		)
 
-func start_drag(card):
-	card_being_dragged = card
+func start_drag(card: Card) -> void:
+	card_detail_ui.show_card_detail(card.card_data);
+	card_being_dragged = card;
 	
 func finish_drag():
 	var card_slot_found = raycast_check_for_card_slot()
@@ -58,7 +61,7 @@ func on_hovered_off_card(card):
 		highlight_card(new_card_hovered, true)
 	
 
-func highlight_card(card,hovered):
+func highlight_card(card, hovered):
 	if hovered:
 		card.scale = Vector2(1.05,1.05)
 		card.z_index = 2
