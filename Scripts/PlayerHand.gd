@@ -12,8 +12,6 @@ var center_screen_x
 func _ready():
 	center_screen_x = get_viewport().size.x / 2;
 	
-
-
 func add_card_to_hand(card: Card, speed: int):
 	if card not in player_hand:
 		player_hand.insert(0,card);

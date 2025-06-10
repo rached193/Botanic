@@ -29,12 +29,12 @@ func start_drag(card: Card) -> void:
 	card_being_dragged = card;
 	
 func finish_drag():
-	var card_slot_found = raycast_check_for_card_slot()
-	if card_slot_found and not card_slot_found.card_in_slot:
+	var card_slot_found: CardSlot = raycast_check_for_card_slot()
+	if card_slot_found and card_slot_found.is_empty():
+		card_slot_found.put_card(card_being_dragged);
 		player_hand_reference.remove_card_from_hand(card_being_dragged);
-		card_being_dragged.position = card_slot_found.position;
-		card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true;
-		card_slot_found.card_in_slot = true
+		#card_being_dragged.position = card_slot_found.position;
+		#card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true;
 	else:
 		player_hand_reference.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED);
 	card_being_dragged = null

@@ -8,7 +8,8 @@ func show_card_detail(card_data: Dictionary):
 	visible = true
 	print(card_data)
 	name_label.text = card_data.get("name", "???")
-	description_text.text = card_data.get("description", "")
+	description_text.text =  "Una planta mágica"
+	print(card_data.get("description", ""))
 	
 	## Limpiar iconos anteriores
 	#for child in icon_container.get_children():
